@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/dataRelativeLayout"
+    android:orientation="horizontal" >
+    <ImageView 
+    android:layout_width="60dp"
+    android:layout_height="80dp"
+    android:id="@+id/dataImg"  
+    android:layout_alignParentLeft="true"  
+    android:src="@drawable/the_endless_river"   
+        />
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/dataImg"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        >
+         <TextView 
+        android:id="@+id/dataType"
+               	android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+       	android:textSize="15sp"
+       	android:text="污染排放"
+         />
+         <TextView 
+        android:id="@+id/dataTime"
+       	android:textSize="12sp"
+       	android:text="2013-12-12 23:45:34"
+       	android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"  
+ 
+        />
+        
+    </LinearLayout>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/triangleImg"
+        android:src="@drawable/triangle" />
+    <TextView 
+        android:id="@+id/dataSubmit"
+       	android:textSize="11sp"
+       	android:text="已上传"
+       	android:layout_toLeftOf="@+id/triangleImg"
+       	android:layout_width="wrap_content"  
+        android:layout_height="wrap_content" 
+        android:layout_centerVertical="true" 
+        />
+    
+   
+
+</RelativeLayout>

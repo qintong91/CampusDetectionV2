@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\android-sdks\android-sdks\extras\android\m2repository\com\android\support\support-annotations\20.0.0\support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-418d46afe3423689b721b3b8f9a7e91fbe08c1c5.jar" />
+    </item>
+    <item
+        jar="D:\androidCode\workspace\CampusDetectionV21\app\libs\BaiduLBS_Android.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="276f65ee8ee789eb2b0c9e0cd1cca65f9433a8c7">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\BaiduLBS_Android-7ff244d64dc1013ba4d48b1eb5f706e36b731180.jar" />
+    </item>
+    <item
+        jar="D:\androidCode\workspace\CampusDetectionV21\app\libs\httpmime-4.2.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6efc2f9df23c2ac4d3b701a11cab9f9fa6a641d4">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\httpmime-4.2.5-ba21df56366b12c79549f2a50b912076b796f46f.jar" />
+    </item>
+    <item
+        jar="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\libs\internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-ea78a91f4970d65b28afe88e03cf21c59ade223b.jar" />
+    </item>
+    <item
+        jar="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\exploded-aar\com.android.support\support-v4\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-a97ac6bcf9ea38c0291e42b876df0ed5b1136dac.jar" />
+    </item>
+    <item
+        jar="D:\androidCode\workspace\CampusDetectionV21\app\libs\sun.misc.BASE64Decoder.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="acd93e3727886196f9b8434279ff445ba8611186">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\sun.misc.BASE64Decoder-a0cd1c66acf891c4c44dfd76b7ac73ce268b64bd.jar" />
+    </item>
+    <item
+        jar="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\20.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
+        <dex dex="D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-cd3d883721012581e847765082c45d4f0a9c799c.jar" />
+    </item>
+
+</items>

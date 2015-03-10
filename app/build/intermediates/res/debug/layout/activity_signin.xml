@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bkg">
+    
+   <TableLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:gravity="center"
+        android:padding="40dp">
+        
+    <TableRow
+         android:gravity="center_horizontal">    
+  
+    
+    <EditText
+        android:orientation="vertical"
+        android:id ="@+id/editTextSignInUser"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:layout_width="fill_parent"
+        android:ems="12"
+        android:hint="用户名"
+        android:inputType="textPersonName" />
+    <requestFocus />
+    </TableRow>
+   
+    <TableRow
+         android:gravity="center_horizontal">
+        
+    
+
+    <EditText
+        android:orientation="vertical"
+         
+        android:layout_marginTop="10dp"
+        android:id ="@+id/editTextSignInPsw"
+        android:paddingTop="20dp"
+       android:layout_width="fill_parent"    
+        android:ems="12"
+        android:hint="密码"
+        android:inputType="textPassword" />              
+    </TableRow>
+    </TableLayout>
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+     <CheckBox
+        android:layout_marginTop="10dp"
+        android:paddingRight="5dp"
+        android:id ="@+id/checkBoxRemPsw"
+       android:layout_width="wrap_content"   
+       android:layout_height="wrap_content"  
+        android:text="记住密码"
+			/>  
+        <CheckBox  
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:id ="@+id/checkBoxAutoSignIn"
+       android:layout_width="wrap_content"  
+       android:layout_height="wrap_content"    
+        android:text="自动登录" />   
+        </LinearLayout> 
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:layout_marginTop="40dp"
+        android:stretchColumns="0">
+     
+    <TableRow>
+        <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登  录" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/buttonToSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注  册" />    
+    </TableRow>
+
+    </TableLayout>
+    
+</LinearLayout><!-- From: file:/D:/androidCode/workspace/CampusDetectionV21/app/src/main/res/layout/activity_signin.xml -->

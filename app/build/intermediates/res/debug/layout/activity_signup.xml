@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bkg">
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:padding="40dp">
+    
+    <TableRow
+        android:gravity="center_horizontal">
+        
+        
+        <EditText
+        android:id="@+id/editText3"
+        android:layout_marginLeft="2dp"
+        android:paddingTop="20dp"
+        android:ems="12"
+        android:hint="用户名"
+        android:inputType="textPersonName" />
+        <requestFocus />
+        
+    </TableRow>
+
+    <TableRow
+        android:gravity="center_horizontal">
+     
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_marginLeft="2dp"
+        android:paddingTop="15dp"
+        android:ems="12"
+        android:hint="邮箱"
+        android:inputType="textEmailAddress" />
+    </TableRow>
+    
+    <TableRow
+        android:gravity="center_horizontal">
+    
+    
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_marginLeft="2dp"
+        android:paddingTop="15dp"
+        android:ems="12"
+        android:hint="密码"
+        android:inputType="textPassword" />
+    </TableRow>
+    
+    </TableLayout>
+    
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:stretchColumns="0">
+    
+    <TableRow
+        >
+        <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:text="注  册" />        
+    </TableRow>
+    
+    <TableRow>
+        <Button 
+        android:id="@+id/buttonSignUpCancel"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:text="取  消"/>
+    </TableRow>
+    
+    </TableLayout>
+
+</LinearLayout>
+<!-- From: file:/D:/androidCode/workspace/CampusDetectionV21/app/src/main/res/layout/activity_signup.xml -->

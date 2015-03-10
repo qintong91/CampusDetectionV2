@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#ffffff" 
+        android:endColor="#ffffff" 
+        android:angle="270"/>
+    <corners android:topLeftRadius="10dip"
+        android:topRightRadius="10dip"
+        android:bottomLeftRadius="10dip"
+        android:bottomRightRadius="10dip"/>
+</shape> 
+<!-- From: file:/D:/androidCode/workspace/CampusDetectionV21/app/src/main/res/drawable/app_list_corner_round.xml -->

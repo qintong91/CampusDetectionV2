@@ -2,6 +2,11 @@ package com.example.campusdetectionv2;
 
 import java.io.File;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.Volley;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
@@ -23,6 +28,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -55,6 +61,7 @@ public class BrowsingInfoActivity extends Activity{
 	public GetImageTask getImageTask = null;
 	public String username;
 	private ProgressDialog pDialog;
+    private RequestQueue mRequestQueue;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -80,8 +87,11 @@ public class BrowsingInfoActivity extends Activity{
 		imageView.setOnClickListener(new DetialImageClickListener());
 		myApp=(MyApp)getApplication();
 		username = myApp.getUsername();
-		getImageTask = new GetImageTask();
-		getImageTask.execute();
+		//getImageTask = new GetImageTask();
+		//getImageTask.execute();
+		prograssBar.setVisibility(View.GONE);
+        mRequestQueue = Volley.newRequestQueue(this);
+		getImage();
 	}
 	class DetialImageClickListener implements View.OnClickListener
 	{
@@ -146,8 +156,9 @@ public class BrowsingInfoActivity extends Activity{
 			 * Creating product
 			 * */
 			protected String doInBackground(String... args) {
-				  File pic = NetUtil.downloadPic(data.getPicpath(),GetImageTask.this);
-				    bmp = BitmapMaker.GetLargeBitmap(pic.getAbsolutePath());				   
+				 // File pic = NetUtil.downloadPic(data.getPicpath(),GetImageTask.this);
+				  //  bmp = BitmapMaker.GetLargeBitmap(pic.getAbsolutePath());
+
 				Message msg = msgHandler.obtainMessage();
 				if(bmp==null)
 				{
@@ -180,5 +191,25 @@ public class BrowsingInfoActivity extends Activity{
 	                }
 	        }
 	    };
-
+	public void getImage(){
+		ImageRequest imageRequest = new ImageRequest(
+				NetUtil.baseStorageUrl+data.getPicpath(),
+				new Response.Listener<Bitmap>() {
+					@Override
+					public void onResponse(Bitmap response) {
+						if(response != null){
+							prograssBar.setVisibility(View.GONE);
+							imageView.setImageBitmap(response);
+						}
+					}
+				}, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
+			@Override
+			public void onErrorResponse(VolleyError error) {
+				//imageView.setImageResource(R.id.dImageView);
+				Message msg = msgHandler.obtainMessage();
+				msg.what = 0x34;
+			}
+		});
+		mRequestQueue.add(imageRequest);
+	}
 }

@@ -91,7 +91,7 @@ public class LocActivity extends Activity    {
 			Context.SENSOR_SERVICE);
         mCamera = getCameraInstance();
         mCamera.setDisplayOrientation(90);
-        button2.setText("确定");
+        button2.setText("OK");
 		button1.setOnClickListener(new button1Listener());
 		button2.setOnClickListener(new button2Listener());
         // Create our Preview view and set it as the content of our activity.
@@ -164,13 +164,13 @@ public class LocActivity extends Activity    {
 
 		if(activityState==1)
 		{
-			button1.setText("获取");
+			button1.setText("GET");
 			button2.setEnabled(false);
 		}
 		if(activityState==2)
 		{
 			button2.setEnabled(true);
-			button1.setText("重测");		
+			button1.setText("重测");
 		}
 		if(activityState==3)
 		{
@@ -223,9 +223,10 @@ public class LocActivity extends Activity    {
 			
 			if(values[1]>-90&&values[1]<0)
 			{
-			sb.append("\n向上夹角");
-			sb.append(""+values[1]);
-			sb.append("\n距离");
+			/*sb.append("\n向上夹角");
+			sb.append(""+values[1]);*/
+			/*sb.append("\n距离");*/
+              sb.append("\nDistance");
 			  dis=LocActivity.getDis(0-values[1],height);
 			sb.append(""+dis);
 			}
@@ -279,13 +280,13 @@ public class LocActivity extends Activity    {
 				if(values[1]>-90&&values[1]<0)
 				{
 					button2.setEnabled(true);
-					button1.setText("重测");
-					sb.append("\n向上夹角");
-					sb.append("" + values[1]);
-					sb.append("\n距离");
+					button1.setText("GET");
+					/*sb.append("\n向上夹角");
+					sb.append("" + values[1]);*/
+					sb.append("\nDistance");
 					dis=LocActivity.getDis(0-values[1],height);
 					sb.append("" + dis);
-					sb.append("\n目标经纬度：");
+					sb.append("\nTarget position：");
 					latlng=ConvertDistanceToLogLat(dis, lat,lon,values[0]);
 					sb.append(latlng);
 				}
@@ -293,12 +294,12 @@ public class LocActivity extends Activity    {
 				{
 					sb.append("\n请瞄准物体底部");					
 					button2.setEnabled(false);
-					button1.setText("重测");
+					button1.setText("GET");
 				}
 				activityState=2;
-				sb.append("\n高度");
-				sb.append("" + height);
-				sb.append("\n与正北夹角");
+			/*	sb.append("\n高度");
+				sb.append("" + height);*/
+				sb.append("\ndirection:");
 				sb.append("" + values[0]);
 				etTxt1.setText(sb.toString()); 
 	
@@ -306,7 +307,7 @@ public class LocActivity extends Activity    {
 			else if(activityState==2)
 			{
 				button2.setEnabled(false);
-				button1.setText("获取");
+				button1.setText("GET");
 				activityState=1;
 				sensorManager.registerListener(myListener,
 						sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),

@@ -193,7 +193,7 @@ public class ZoomImageView extends View{
 					   {
 						   totalTranslateX = 0;
 						   totalTranslateY = 0;
-			        		currentStatus2 = STATUS_ZOOM_MIN;
+						   currentStatus2 = STATUS_ZOOM_MIN;
 					   }
 			        	else
 			        	{
@@ -439,6 +439,7 @@ public class ZoomImageView extends View{
 				currentBitmapHeight = bitmapHeight;
 			}*/
 			canvas.drawBitmap(sourceBitmap, matrix, null);
+			invalidate();
 		}
 	}
 

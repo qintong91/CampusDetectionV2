@@ -9,6 +9,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -52,10 +54,12 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.provider.MediaStore;
  
 import android.support.v4.app.Fragment;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -270,7 +274,8 @@ public class ReportFragment extends Fragment{
 	                intent.putExtras(mBundle);
 	             	startActivity(intent);
 			  }
-		    }	
+		    }
+
 	}
 	class SaveClickListener implements View.OnClickListener
 	{
@@ -343,9 +348,11 @@ public class ReportFragment extends Fragment{
 				 }
 			 if(remark!=""&&type!=null&&Math.abs(targetLat)>1&&Math.abs(targetLng)>1&&getImage)
 			 {
+
 				  data=new ReportData(new Date(System.currentTimeMillis()), type, userLat, userLng, targetLat, targetLng, picPath, remark, false, null,false);
 				  SubmitTask asyncTask = new SubmitTask();
-				  asyncTask.execute();								 		 
+				  asyncTask.execute();
+                  resetInput();
 			 }
 			 else
 			 {
@@ -376,7 +383,6 @@ public class ReportFragment extends Fragment{
 	private static File getOutputMediaFile(int type){
 	    // To be safe, you should check that the SDCard is mounted
 	    // using Environment.getExternalStorageState() before doing this.
-
 	    File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
 	              Environment.DIRECTORY_PICTURES), "CampuseDetectionV2");
 	    // This location works best if you want the created images to be shared
@@ -440,6 +446,7 @@ public class ReportFragment extends Fragment{
 			protected void onProgressUpdate(Integer... values)///执行操作中，发布进度后
 		 
 			{
+
 		 
 		//	progressBar.setProgress(values[0]);//每次更新进度条
 		 

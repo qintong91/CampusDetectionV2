@@ -1,8 +1,10 @@
 D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\classes\debug
-D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\support-annotations-20.0.0-418d46afe3423689b721b3b8f9a7e91fbe08c1c5.jar
+D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-b6805892bfc50225b355314ece741f36c0a3116e.jar
 D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\sun.misc.BASE64Decoder-a0cd1c66acf891c4c44dfd76b7ac73ce268b64bd.jar
 D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\httpmime-4.2.5-ba21df56366b12c79549f2a50b912076b796f46f.jar
-D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\internal_impl-20.0.0-ea78a91f4970d65b28afe88e03cf21c59ade223b.jar
-D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-cd3d883721012581e847765082c45d4f0a9c799c.jar
-D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-a97ac6bcf9ea38c0291e42b876df0ed5b1136dac.jar
+D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-1574a4ac91c7fe87f593eacb5b9d2f8e1c5bc0ef.jar
+D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\volley-381ce87b853e3f120c5b2022b4bde2be25697522.jar
+D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-c224d1dcb55428856488a064c8593762d1972424.jar
+D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-394599fd8eede30addf2ee2c594e5a5dcdf2372b.jar
 D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\BaiduLBS_Android-7ff244d64dc1013ba4d48b1eb5f706e36b731180.jar
+D:\androidCode\workspace\CampusDetectionV21\app\build\intermediates\pre-dexed\debug\classes-a97d688c93835f5be49f214846b9435e208d9f66.jar

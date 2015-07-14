@@ -8,7 +8,8 @@ import java.io.InputStream;
 
 import com.example.campusdetectionv2.support.MD5Util;
 import com.example.campusdetectionv2.support.ReportDataBase;
- 
+
+import android.app.Service;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -39,7 +40,6 @@ public class MainActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
 		setContentView(R.layout.activity_main);
@@ -51,21 +51,21 @@ public class MainActivity extends FragmentActivity {
         mTabWidget.setBackgroundColor(Color.WHITE);
         mTabWidget.setShowDividers(LinearLayout.SHOW_DIVIDER_NONE);
         mTabWidget.setGravity(Gravity.BOTTOM); 
-        indicator = getIndicatorView("举报", R.layout.report_indicator);	     
+        indicator = getIndicatorView("Report", R.layout.report_indicator);
        /* mTabHost.addTab(mTabHost.newTabSpec("simple").setIndicator(indicator),
         		ReportFragment.class, null);*/
          mTabHost.addTab(mTabHost.newTabSpec("Report").setIndicator(indicator),
         		 ReportFragment.class, null);   
-        indicator = getIndicatorView("记录", R.layout.data_indicator);	     
+        indicator = getIndicatorView("Data", R.layout.data_indicator);
         mTabHost.addTab(mTabHost.newTabSpec("Data")  
                 .setIndicator(indicator), DataFragment.class, null);  
-        indicator = getIndicatorView("浏览", R.layout.browsing_indicator);	     
+        indicator = getIndicatorView("Browsing", R.layout.browsing_indicator);
         mTabHost.addTab(mTabHost.newTabSpec("Browsing")  
                 .setIndicator(indicator), BrowsingFragment.class, null);  
-        indicator = getIndicatorView("噪声", R.layout.noise_indicator);	     
-        mTabHost.addTab(mTabHost.newTabSpec("Noise")  
-                .setIndicator(indicator), NoiseFragment.class, null);  
-        indicator = getIndicatorView("设置", R.layout.setting_indicator);	     
+        indicator = getIndicatorView("Noise", R.layout.noise_indicator);
+       mTabHost.addTab(mTabHost.newTabSpec("Noise")
+                .setIndicator(indicator), NoiseFragment.class, null);
+        indicator = getIndicatorView("Setting", R.layout.setting_indicator);
         mTabHost.addTab(mTabHost.newTabSpec("Setting")  
                 .setIndicator(indicator), SettingFragment.class, null);
        ReportDataBase db=new ReportDataBase(this,"qin");

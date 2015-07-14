@@ -10,6 +10,8 @@ import javax.xml.parsers.SAXParserFactory;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
@@ -53,6 +55,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 public class DetialActivity extends Activity{
 	MapView mMapView = null;
 	BaiduMap mBaiduMap=null;
@@ -71,8 +75,12 @@ public class DetialActivity extends Activity{
 	public Bitmap bmp = null;
 	public  MyApp myApp;
 	public String username;
+
 	private ProgressDialog pDialog;
-	protected void onCreate(Bundle savedInstanceState) {
+
+
+
+    protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_detial);
@@ -94,12 +102,14 @@ public class DetialActivity extends Activity{
         mBaiduMap.setMyLocationEnabled(false);
 		data = (ReportData)getIntent().getSerializableExtra(DataFragment.SER_KEY);
 		setView();
+
 		imageView.setOnClickListener(new DetialImageClickListener());
 		submitButton.setOnClickListener(new DetialSubmitClickListener());
 		myApp=(MyApp)getApplication();
 		username = myApp.getUsername();
-		
-	}
+
+
+    }
 	class DetialSubmitClickListener implements View.OnClickListener
 	{
 		  @Override
@@ -131,17 +141,17 @@ public class DetialActivity extends Activity{
 			protected void onPreExecute() {
 				super.onPreExecute();
 				pDialog = new ProgressDialog(DetialActivity.this);
-				pDialog.setMessage("ÉÏ´«ÖĞ..");
+				pDialog.setMessage("ä¸Šä¼ ä¸­..");
 				pDialog.setIndeterminate(false);
 				pDialog.setCancelable(true);
 				pDialog.show();
 			}
 			@Override                     			 
-			protected void onProgressUpdate(Integer... values)///Ö´ĞĞ²Ù×÷ÖĞ£¬·¢²¼½ø¶Èºó
+			protected void onProgressUpdate(Integer... values)///æ‰§è¡Œæ“ä½œä¸­ï¼Œå‘å¸ƒè¿›åº¦å
 		 
 			{
 
-		//	progressBar.setProgress(values[0]);//Ã¿´Î¸üĞÂ½ø¶ÈÌõ
+		//	progressBar.setProgress(values[0]);//æ¯æ¬¡æ›´æ–°è¿›åº¦æ¡
 		 
 			}
 
@@ -199,19 +209,19 @@ public class DetialActivity extends Activity{
 	        {
 	                switch (msg.what) {
 	                case 0x44:
-	                	Toast.makeText(DetialActivity.this, "ÉÏ´«Ê§°Ü", Toast.LENGTH_SHORT).show();
+	                	Toast.makeText(DetialActivity.this, "ä¸Šä¼ å¤±è´¥", Toast.LENGTH_SHORT).show();
 	                        break;
 	                case 0x45:
-	                	Toast.makeText(DetialActivity.this, "ÉÏ´«³É¹¦|Í¼Æ¬ÎªÕæ", Toast.LENGTH_SHORT).show();
+	                	Toast.makeText(DetialActivity.this, "ä¸Šä¼ æˆåŠŸ|å›¾ç‰‡ä¸ºçœŸ", Toast.LENGTH_SHORT).show();
 	                        break;
 	                case 0x46:
-	                	Toast.makeText(DetialActivity.this, "ÉÏ´«³É¹¦|Í¼Æ¬Îª¼Ù", Toast.LENGTH_SHORT).show();
+	                	Toast.makeText(DetialActivity.this, "ä¸Šä¼ æˆåŠŸ|å›¾ç‰‡ä¸ºå‡", Toast.LENGTH_SHORT).show();
 	                        break;
 	                case 0x48:
-	                	Toast.makeText(DetialActivity.this, "ÉÏ´«³É¹¦|Í¼Æ¬ÎªÕæ|±£´æÊ§°Ü", Toast.LENGTH_SHORT).show();
+	                	Toast.makeText(DetialActivity.this, "ä¸Šä¼ æˆåŠŸ|å›¾ç‰‡ä¸ºçœŸ|ä¿å­˜å¤±è´¥", Toast.LENGTH_SHORT).show();
 	                        break;
 	                case 0x49:
-	                	Toast.makeText(DetialActivity.this, "ÉÏ´«³É¹¦|Í¼Æ¬Îª¼Ù|±£´æÊ§°Ü", Toast.LENGTH_SHORT).show();
+	                	Toast.makeText(DetialActivity.this, "ä¸Šä¼ æˆåŠŸ|å›¾ç‰‡ä¸ºå‡|ä¿å­˜å¤±è´¥", Toast.LENGTH_SHORT).show();
 	                        break;
 	                default:
 	                        break;
@@ -249,18 +259,18 @@ public class DetialActivity extends Activity{
 				submitTimeView.setText(data.getSubmitTime());
 				submitButton.setBackgroundResource(drawable.disable_button_shape);
 				submitButton.setEnabled(false);
-				submitButton.setText("ÒÑÉÏ´«");
+				submitButton.setText("å·²ä¸Šä¼ ");
 				if(data.isPicAuthenticity()){
-					authorityView.setText("Õæ");
+					authorityView.setText("True");
 				}
 				else{
-					authorityView.setText("Î±");
+					authorityView.setText("False");
 				}
 			}
 			else{
 				submitTimeRow.setVisibility(View.GONE);
 				authorityRow.setVisibility(View.GONE);
-				submitButton.setText("ÉÏ´«");
+				submitButton.setText("UPLOAD");
 				submitButton.setEnabled(true);
 			}
 	    }

@@ -48,6 +48,7 @@ public class BitmapMaker {
 	 
 		 return bmp;
 	}
+
 	public static Bitmap GetSmallBitmap(String picPath)  
 	{
 		 	Bitmap bmp;	 	

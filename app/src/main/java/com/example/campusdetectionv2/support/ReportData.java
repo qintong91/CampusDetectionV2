@@ -176,7 +176,8 @@ public class ReportData implements Serializable{
 	}
 	public String getTypeString()
 	{
-		String str="";
+        return type;
+		/*String str="";
 		switch(type){
 		case "Garbage" : 
 			str="垃圾污染";
@@ -187,7 +188,7 @@ public class ReportData implements Serializable{
 		case "Damage" : 
 			str="设施损坏";
 		}
-		return str;
+		return str;*/
 	}
 	public boolean saveSubmitInfo(Context context,String username)
 	{

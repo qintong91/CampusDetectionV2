@@ -103,9 +103,9 @@ public class DataFragment extends ListFragment{
             holder.dataTime.setText(dataList.get(position).getSaveTime());
             holder.dataType.setText(dataList.get(position).getTypeString());
             if(dataList.get(position).isSubmit())
-                holder.dataSumit.setText("���ϴ�");
+                holder.dataSumit.setText("Already Uploaded");
             else{
-                holder.dataSumit.setText("δ�ϴ�");
+                holder.dataSumit.setText("Not Uploaded");
                 holder.dataSumit.setTextColor(Color.parseColor("#33B5E5"));
             }
             convertView.setBackgroundColor(color.background_light);

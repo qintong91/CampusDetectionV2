@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center|center"
-            android:text="点击获取图片"
+            android:text="Click To Get Image"
             android:textSize="20sp"
             android:textColor="#cccccc"
             />
@@ -73,7 +73,7 @@
         	<TextView 
         	    android:layout_width="match_parent"
         	    android:layout_height="wrap_content"
-        	    android:text="污染源类型："
+        	    android:text="TYPE："
         	    android:paddingLeft="10dp"
         	    android:textSize="16sp"
         	    android:layout_gravity="center"
@@ -99,7 +99,7 @@
 	                android:gravity="center|center"           
 	                android:button="@null" 
 	                android:background="@drawable/radio_button_selector"
-	                android:text="垃圾污染" />
+	                android:text="pollution" />
 	
 	            <RadioButton
 	                android:id="@+id/radioDischarge"
@@ -110,7 +110,7 @@
 	                 android:gravity="center|center"
 	                 android:button="@null" 
 	                android:background="@drawable/radio_button_selector"
-	                android:text="污染排放" />
+	                android:text="occupied" />
 	
 	            <RadioButton
 	                android:id="@+id/radioDamage"
@@ -120,7 +120,7 @@
 	                android:gravity="center|center" 
 	                 android:button="@null" 
 	                android:background="@drawable/radio_button_selector"
-	                android:text="设施损坏" />
+	                android:text="damage" />
 	        </RadioGroup>
 	        
  		</LinearLayout>
@@ -138,7 +138,7 @@
 	                 android:layout_marginTop="0dp" 
 	                 android:layout_gravity="center"	         
 	                 android:gravity="center|center"
-	                 android:text="污染源定位"	                  
+	                 android:text="Locating"
 	             android:background="@drawable/get_location_button_shape"
 	            />	            
  			<EditText
@@ -156,7 +156,7 @@
  			    android:minLines="3"
  			    android:background="@drawable/edittext_shape"
  			    android:inputType="textMultiLine" 
- 			    android:hint="请添加相关描述">
+ 			    android:hint="Discribe">
  			     
  			</EditText>
 
@@ -196,7 +196,7 @@
 	                 android:layout_weight="1"
 	                 android:layout_gravity="center" 
 	                 android:gravity="center|center"
-	                  android:text="保存"	
+	                  android:text="SAVE"
 	             android:background="@drawable/base_button_shape"
 	            />
           <Button
@@ -210,7 +210,7 @@
 	                 android:layout_weight="1"
 	                 android:layout_gravity="center" 
 	                 android:gravity="center|center"
-	                  android:text="上传"	
+	                  android:text="UPLOAD"
 	             android:background="@drawable/base_button_shape"
 	            />
     </LinearLayout>

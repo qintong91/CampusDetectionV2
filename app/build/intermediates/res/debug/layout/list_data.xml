@@ -46,7 +46,7 @@
     <TextView 
         android:id="@+id/dataSubmit"
        	android:textSize="11sp"
-       	android:text="已上传"
+       	android:text="Already Uploaded"
        	android:layout_toLeftOf="@+id/triangleImg"
        	android:layout_width="wrap_content"  
         android:layout_height="wrap_content" 

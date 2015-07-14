@@ -36,7 +36,7 @@ public class NetUtil {
 	
  
 	  final static String  baseUrl="http://1.campusdetection.sinaapp.com/";
-	  final static String   baseStorageUrl = "http://campusdetection-uploads.stor.sinaapp.com/";
+	  public final static String   baseStorageUrl = "http://campusdetection-uploads.stor.sinaapp.com/";
 	
 	//发送个人头像
 	public static JSONObject uploadSubmit(String url, Map<String, String> param,File file) throws Exception {

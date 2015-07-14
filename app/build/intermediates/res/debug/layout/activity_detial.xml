@@ -45,7 +45,7 @@
 		    android:layout_weight="1"
 		    android:layout_gravity="center" 
 		    android:gravity="center|center"
-		    android:text="上传"	
+		    android:text="UPLOAD"
 		    android:background="@drawable/base_button_shape"
 	      />
 	     <View
@@ -68,7 +68,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="污染源类型：" />  		  
+		            android:text="Type：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
@@ -84,7 +84,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="采集时间：" />  		  
+		            android:text="Detect Time：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
@@ -101,7 +101,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="上传时间：" />  		  
+		            android:text="Upload Time：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
@@ -117,7 +117,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="备注信息：" />  		  
+		            android:text="Discribe：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
@@ -133,7 +133,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="目标经纬度：" />  		  
+		            android:text="Target Position：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
@@ -149,7 +149,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="用户经纬度：" />  		  
+		            android:text="User Position：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
@@ -166,7 +166,7 @@
 		            android:layout_height="wrap_content"
 		            android:textSize="40px"  
 		            android:textColor="#aaaaaa"
-		            android:text="图片真实性：" />  		  
+		            android:text="Authenticity：" />
 		        <TextView  
 		            android:layout_width="wrap_content"  
 		            android:layout_height="wrap_content"  
